@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes List</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Notes</h1>
+
+    <a href="{% url 'notes:create' %}">Create Note</a>
+
+    {% for note in notes %}
+        <a href="{% url 'notes:detail' note_id=note.pk %}"><h3>{{ note.note_title }}</h3></a>
+    {% empty %}
+        <h3>No Notes</h3>
+    {% endfor %}
+
+    <a href="{% url 'home' %}">Back to Home</a>
+
+
+</body>
+</html>

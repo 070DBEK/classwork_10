@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ sport.name }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>{{ sport.name }}</h1>
+
+    <h3>Note: {{ note.note_title }}</h3>
+    <h3>Release Year: {{ note.content }}</h3>
+
+    <button><a href="{{ note.get_update_url }}">Update</a></button>
+
+    <button><a href="{% url 'notes:delete' note_id=note.pk %}">Delete</a></button>
+
+    <button><a href="{% url 'notes:list' %}">Back to List</a></button>
+
+</body>
+</html>

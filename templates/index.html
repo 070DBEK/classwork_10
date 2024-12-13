@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static %} <!-- STATIC TEGINI LOADING -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <a href="{% url 'notes:list' %}" class="btn">Go to Notes List</a><br><br>
+    <a href="{% url 'home' %}" class="btn">Go to Task List</a>
+</body>
+</html>
