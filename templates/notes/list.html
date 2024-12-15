@@ -9,7 +9,7 @@
 <body>
     <h1>Notes</h1>
 
-    <a href="{% url 'notes:create' %}">Create Note</a>
+    <button><a href="{% url 'notes:create' %}">Create Note</a></button>
 
     {% for note in notes %}
         <a href="{% url 'notes:detail' note_id=note.pk %}"><h3>{{ note.note_title }}</h3></a>

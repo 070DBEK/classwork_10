@@ -32,7 +32,7 @@ def update_note(request, note_id):
         content = request.POST.get('content')
         if note_title and content:
             note.note=note_title,
-
+            note.content=content,
             return redirect(note.get_detail_url())
     ctx = {'note': note}
     return render(request, 'notes/form.html', ctx)

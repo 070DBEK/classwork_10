@@ -12,11 +12,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Note',
+            name='Task',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('note_title', models.CharField(max_length=150)),
-                ('content', models.TextField()),
+                ('task_title', models.CharField(max_length=100)),
+                ('due_date', models.DateField()),
+                ('description', models.TextField()),
             ],
         ),
     ]
